@@ -1,0 +1,37 @@
+.hero-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-from__input {
+    margin-bottom: 16px;
+    padding: 10px 24px;
+
+    color: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.04);
+
+    &::placeholder {
+        color: var(--white);
+        opacity: 0.7;
+    }
+
+    &:focus {
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+.hero-form__submit-btn {
+    margin-bottom: 12px;
+}
+
+.hero-form__policy {
+    font-size: 14px;
+    line-height: 20px;
+
+    opacity: 0.4;
+}
