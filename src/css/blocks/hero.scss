@@ -1,0 +1,89 @@
+.hero {
+    padding-top: 54px;
+    padding-bottom: 20px;
+
+    background-image: url('../img/img-hero-large.png');
+    background-repeat: no-repeat;
+    background-position: right -100px bottom 20px;
+    background-size: 260px;
+
+    @media (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 32px;
+
+        background-position: right -100px bottom 50px;
+        background-size: 320px;
+    }
+
+    @media (min-width: 1024px) {
+        background-position: right -140px bottom -40px;
+        background-size: 510px;
+    }
+
+    @media (min-width: 1440px) {
+        background-position: right center;
+        background-size: 670px;
+    }
+}
+
+.hero__title {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+
+    @media (min-width: 1024px) {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.hero__subtitle {
+    margin-bottom: 32px;
+
+    font-size: 34px;
+    line-height: 35px;
+    font-weight: 700;
+
+    @media (min-width: 768px) {
+        max-width: 75%;
+        margin-bottom: 40px;
+
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 60px;
+        line-height: 68px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 60%;
+    }
+
+    span {
+        color: var(--yellow);
+    }
+}
+
+.hero__form {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        max-width: 75%;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 62.5%;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 45%;
+    }
+}
