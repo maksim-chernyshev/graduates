@@ -1,8 +1,10 @@
 .mission {
     padding-top: 20px;
+    padding-bottom: 20px;
 
     @media(min-width: 1024px) {
         padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -110,6 +112,10 @@
 
     @media(min-width: 1024px) {
         padding: 230px 32px 32px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
