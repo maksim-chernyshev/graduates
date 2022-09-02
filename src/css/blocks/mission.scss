@@ -1,5 +1,9 @@
 .mission {
     padding-top: 20px;
+
+    @media(min-width: 1024px) {
+        padding-top: 40px;
+    }
 }
 
 .mission__inner {
@@ -7,14 +11,39 @@
 
     border-radius: 24px 24px 0 0;
     background: rgba(255, 255, 255, 0.04);
-}
 
+    @media(min-width: 768px) {
+        padding: 32px 36px;
+    }
+
+    @media(min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px 32px;
+    }
+
+    @media(min-width: 1440px) {
+        padding: 64px;
+    }
+}
 
 .mission__title {
     margin-bottom: 24px;
 
     font-size: 32px;
     line-height: 40px;
+
+    @media(min-width: 1024px) {
+        align-self: center;
+        margin-bottom: 0;
+
+        font-size: 56px;
+        line-height: 64px;
+
+        span {
+            display: block;
+        }
+    }
 }
 
 .mission__text {
@@ -26,27 +55,75 @@
 
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.04);
+
+    @media(min-width: 1024px) {
+        margin-bottom: 0;
+        padding: 24px;
+
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 .mission__cards {
+    @media(min-width: 768px) {
+        overflow: hidden;
+        margin-left: -24px;
+        padding: 24px 24px 0;
+    }
 
+    @media(min-width: 1024px) {
+        grid-column: 1 / -1;
+        margin-left: -32px;
+        padding: 32px 32px 0;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
+    }
 }
 
 .mission__card {
     position: relative;
+    box-sizing: border-box;
 
     margin-bottom: 24px;
     padding: 170px 24px 24px;
 
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media(min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media(min-width: 1024px) {
+        padding: 230px 32px 32px;
+    }
 }
 
 .mission__card-heading {
+    overflow-wrap: anywhere;
     margin-bottom: 4px;
 
     font-size: 20px;
     line-height: 26px;
+
+    @media(min-width: 1024px) {
+        font-size: 32px;
+        line-height: 40px;
+    }
 }
 
 .mission__card-img {
@@ -58,39 +135,144 @@
     width: 270px;
     height: auto;
 
+    @media(min-width: 768px) {
+        width: 240px;
+    }
+
+    @media(min-width: 1024px) {
+        top: -60px;
+        width: 320px;
+    }
+
+    @media(min-width: 1440px) {
+        top: -60px;
+        width: 340px;
+    }
+
     &--2 {
         width: 250px;
+
+        @media(min-width: 768px) {
+            width: 220px;
+        }
+
+        @media(min-width: 1024px) {
+            top: -40px;
+
+            width: 320px;
+        }
+
+        @media(min-width: 1440px) {
+            width: 340px;
+        }
+    }
+
+    &--3 {
+        @media(min-width: 768px) {
+            top: -20px;
+
+            width: 220px;
+        }
+
+        @media(min-width: 1024px) {
+            top: -50px;
+
+            width: 340px;
+        }
+    }
+
+    &--4 {
+        @media(min-width: 768px) {
+            width: 210px;
+        }
+
+        @media(min-width: 1024px) {
+            top: -30px;
+
+            width: 300px;
+        }
+
+        @media(min-width: 1440px) {
+            width: 340px;
+        }
     }
 
     &--5 {
         top: -45px;
 
         width: 250px;
+
+        @media(min-width: 768px) {
+            top: -35px;
+
+            width: 220px;
+        }
+
+        @media(min-width: 1024px) {
+            top: -65px;
+
+            width: 320px;
+        }
+
+        @media(min-width: 1440px) {
+            width: 340px;
+        }
     }
 
     &--6 {
         top: -35px;
 
         width: 250px;
+
+        @media(min-width: 768px) {
+            top: -25px;
+
+            width: 220px;
+        }
+
+        @media(min-width: 1024px) {
+            top: -45px;
+
+            width: 320px;
+        }
+
+        @media(min-width: 1440px) {
+            width: 340px;
+        }
     }
 }
 
 .mission__card-text {
+    margin-bottom: 40px;
+
     font-size: 14px;
     line-height: 20px;
     color: #FFFFFF;
     opacity: 0.7;
+
+    @media(min-width: 1024px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .mission__card-price {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: auto;
     padding: 6px 12px;
 
     font-size: 11px;
     line-height: 12px;
+    font-weight: 700;
     color: var(--black);
 
     border-radius: 46px;
     background-color: var(--yellow);
+
+    @media(min-width: 1024px) {
+        padding: 9px 16px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
