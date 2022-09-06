@@ -15,7 +15,7 @@
     }
 }
 
-.hero-from__input {
+.hero-form__input {
     margin-bottom: 16px;
     padding: 10px 24px;
 
@@ -41,6 +41,10 @@
         &::placeholder {
             color: transparent;
         }
+    }
+
+    &.error {
+        border-color: var(--pink);
     }
 }
 

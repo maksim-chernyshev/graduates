@@ -1,21 +1,21 @@
 .root {
+    position: relative;
+
     padding-top: 20px;
-    padding-bottom: 20px;
     font-family: 'Circe', sans-serif;
     font-weight: 400;
     color: var(--white);
 
     background-color: var(--black);
     background-image: url('../img/bg-gradient.png');
+    scroll-behavior: smooth;
 
     @media (min-width: 768px) {
         padding-top: 32px;
-        padding-bottom: 32px;
     }
 
     @media (min-width: 1024px) {
         padding-top: 40px;
-        padding-bottom: 40px;
     }
 }
 
@@ -42,4 +42,12 @@
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
     border: 0 !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.lock-scroll {
+    overflow: hidden;
 }

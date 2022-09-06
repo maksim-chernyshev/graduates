@@ -1,0 +1,53 @@
+.modal-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    display: block;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+
+    background-color: var(--black);
+    background-image:
+            url('../img/img-hero-large.png'),
+            url('../img/bg-gradient.png');
+    background-repeat: no-repeat, repeat;
+    background-position: right -65px bottom -20px, left top;
+    background-size: 300px, auto;
+}
+
+.modal-nav__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modal-nav__header {
+    margin-bottom: 110px;
+}
+
+.modal-nav__links {
+    margin-bottom: 167px;
+}
+
+.modal-nav__link {
+    display: block;
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.modal-nav__btn {
+
+}

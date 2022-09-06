@@ -11,9 +11,9 @@
 </head>
 <body class="root">
 
-<header class="header content-wrapper">
+<header class="header content-wrapper" data-section="header">
     <div class="header__logo">
-        <a class="header__logo-link" href="/">
+        <a class="header__logo-link" href="/" data-js="logoLink">
             <img class="header__logo-img"
                  src="img/logo-main.svg"
                  alt="Автор24"
@@ -24,30 +24,32 @@
         <span>&mdash;&nbsp;платим за&nbsp;знания</span>
     </div>
     <nav class="header__navigation navigation">
-        <a class="navigation__link" href="#mission">Как это работает</a>
-        <a class="navigation__link" href="#banner">Участвуй в&nbsp;розыгрыше</a>
-        <a class="navigation__link" href="#reviews">Отзывы</a>
+        <a class="navigation__link" data-anchor="mission">Как это работает</a>
+        <a class="navigation__link" data-anchor="banner">Участвуй в&nbsp;розыгрыше</a>
+        <a class="navigation__link" data-anchor="reviews">Отзывы</a>
     </nav>
-    <button class="header__menu-btn">
+    <button class="header__menu-btn" type="button" data-btn="openNavigation">
         <img class="header__menu-img"
              src="img/icon-burger-menu.svg"
              alt="Меню"
+             width="24"
+             height="24"
         >
     </button>
 </header>
 
 <main class="main">
-    <section class="hero content-wrapper">
+    <section class="hero content-wrapper" id="hero">
         <h1 class="hero__title">Заработай деньги с&nbsp;Автор24</h1>
         <h2 class="hero__subtitle">
             Помогай младшекурсникам и&nbsp;зарабатывай от&nbsp;<span>35&nbsp;000&nbsp;₽</span>/мес.
         </h2>
 
-        <form class="hero__form hero-form" action="#">
+        <form class="hero__form hero-form" action="https://a24.biz/reg/promoAuthor">
             <input type="hidden" value="Имя">
             <input type="hidden" value="Фамилия">
 
-            <input class="hero-from__input"
+            <input class="hero-form__input"
                    type="email"
                    aria-label="Укажите свой email"
                    placeholder="E-mail"
@@ -186,7 +188,7 @@
                  width="498" height="332">
             <img class="banner__img banner__img--marketplace" src="img/img-marketplace-320.png" alt="Склад подарков"
                  width="377" height="227">
-            <form class="banner__form" action="#">
+            <form class="banner__form" action="https://a24.biz/reg/promoAuthor">
                 <input type="hidden" value="Имя">
                 <input type="hidden" value="Фамилия">
 
@@ -207,13 +209,17 @@
                 <h2 class="reviews__title">Эксперты о&nbsp;нас</h2>
                 <div class="reviews__controls">
                     <button class="reviews__btn reviews__btn--prev" type="button" aria-label="Предыдущий отзыв">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M18.0804 14.5725C18.0809 14.3393 17.9861 14.1132 17.8122 13.9336L11.9819 7.94412C11.784 7.74026 11.4996 7.61206 11.1912 7.58772C10.8829 7.56338 10.5759 7.6449 10.3377 7.81434C10.0996 7.98379 9.94987 8.22727 9.92144 8.49124C9.89301 8.7552 9.98823 9.01802 10.1862 9.22188L15.4101 14.5725L10.3727 19.9232C10.2759 20.0253 10.2035 20.1428 10.1599 20.2689C10.1162 20.395 10.1021 20.5272 10.1184 20.658C10.1346 20.7888 10.1809 20.9156 10.2546 21.031C10.3283 21.1465 10.4279 21.2483 10.5476 21.3307C10.6675 21.4221 10.8082 21.4913 10.9608 21.5341C11.1134 21.5768 11.2747 21.5921 11.4345 21.5789C11.5943 21.5658 11.7493 21.5246 11.8896 21.4578C12.0299 21.3911 12.1527 21.3002 12.2501 21.1909L17.8822 15.2014C18.0285 15.0167 18.0983 14.7952 18.0804 14.5725V14.5725Z" fill="currentColor"/>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                             aria-hidden="true">
+                            <path d="M18.0804 14.5725C18.0809 14.3393 17.9861 14.1132 17.8122 13.9336L11.9819 7.94412C11.784 7.74026 11.4996 7.61206 11.1912 7.58772C10.8829 7.56338 10.5759 7.6449 10.3377 7.81434C10.0996 7.98379 9.94987 8.22727 9.92144 8.49124C9.89301 8.7552 9.98823 9.01802 10.1862 9.22188L15.4101 14.5725L10.3727 19.9232C10.2759 20.0253 10.2035 20.1428 10.1599 20.2689C10.1162 20.395 10.1021 20.5272 10.1184 20.658C10.1346 20.7888 10.1809 20.9156 10.2546 21.031C10.3283 21.1465 10.4279 21.2483 10.5476 21.3307C10.6675 21.4221 10.8082 21.4913 10.9608 21.5341C11.1134 21.5768 11.2747 21.5921 11.4345 21.5789C11.5943 21.5658 11.7493 21.5246 11.8896 21.4578C12.0299 21.3911 12.1527 21.3002 12.2501 21.1909L17.8822 15.2014C18.0285 15.0167 18.0983 14.7952 18.0804 14.5725V14.5725Z"
+                                  fill="currentColor"/>
                         </svg>
                     </button>
                     <button class="reviews__btn reviews__btn--next" type="button" aria-label="Следующий отзыв">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M18.0804 14.5725C18.0809 14.3393 17.9861 14.1132 17.8122 13.9336L11.9819 7.94412C11.784 7.74026 11.4996 7.61206 11.1912 7.58772C10.8829 7.56338 10.5759 7.6449 10.3377 7.81434C10.0996 7.98379 9.94987 8.22727 9.92144 8.49124C9.89301 8.7552 9.98823 9.01802 10.1862 9.22188L15.4101 14.5725L10.3727 19.9232C10.2759 20.0253 10.2035 20.1428 10.1599 20.2689C10.1162 20.395 10.1021 20.5272 10.1184 20.658C10.1346 20.7888 10.1809 20.9156 10.2546 21.031C10.3283 21.1465 10.4279 21.2483 10.5476 21.3307C10.6675 21.4221 10.8082 21.4913 10.9608 21.5341C11.1134 21.5768 11.2747 21.5921 11.4345 21.5789C11.5943 21.5658 11.7493 21.5246 11.8896 21.4578C12.0299 21.3911 12.1527 21.3002 12.2501 21.1909L17.8822 15.2014C18.0285 15.0167 18.0983 14.7952 18.0804 14.5725V14.5725Z" fill="currentColor"/>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                             aria-hidden="true">
+                            <path d="M18.0804 14.5725C18.0809 14.3393 17.9861 14.1132 17.8122 13.9336L11.9819 7.94412C11.784 7.74026 11.4996 7.61206 11.1912 7.58772C10.8829 7.56338 10.5759 7.6449 10.3377 7.81434C10.0996 7.98379 9.94987 8.22727 9.92144 8.49124C9.89301 8.7552 9.98823 9.01802 10.1862 9.22188L15.4101 14.5725L10.3727 19.9232C10.2759 20.0253 10.2035 20.1428 10.1599 20.2689C10.1162 20.395 10.1021 20.5272 10.1184 20.658C10.1346 20.7888 10.1809 20.9156 10.2546 21.031C10.3283 21.1465 10.4279 21.2483 10.5476 21.3307C10.6675 21.4221 10.8082 21.4913 10.9608 21.5341C11.1134 21.5768 11.2747 21.5921 11.4345 21.5789C11.5943 21.5658 11.7493 21.5246 11.8896 21.4578C12.0299 21.3911 12.1527 21.3002 12.2501 21.1909L17.8822 15.2014C18.0285 15.0167 18.0983 14.7952 18.0804 14.5725V14.5725Z"
+                                  fill="currentColor"/>
                         </svg>
                     </button>
                 </div>
@@ -226,7 +232,7 @@
                         delectus dignissimos eos inventore iste quas similique sit vero. Beatae consequuntur ducimus
                         earum error ex laboriosam numquam quo quos recusandae.
                     </p>
-                    <img class="review__img" src="img/img-review-1.jpg" alt="Фото автора отзыва">
+                    <img class="review__img" src="img/img-review-1.jpg" alt="Фото автора отзыва" loading="lazy">
                 </div>
 
                 <div class="reviews__slide swiper-slide">
@@ -236,7 +242,7 @@
                         delectus dignissimos eos inventore iste quas similique sit vero. Beatae consequuntur ducimus
                         earum error ex laboriosam numquam quo quos recusandae.
                     </p>
-                    <img class="review__img" src="img/img-review-2.jpg" alt="Фото автора отзыва">
+                    <img class="review__img" src="img/img-review-2.jpg" alt="Фото автора отзыва" loading="lazy">
                 </div>
 
                 <div class="reviews__slide swiper-slide">
@@ -246,15 +252,89 @@
                         delectus dignissimos eos inventore iste quas similique sit vero. Beatae consequuntur ducimus
                         earum error ex laboriosam numquam quo quos recusandae.
                     </p>
-                    <img class="review__img" src="img/img-review-3.jpg" alt="Фото автора отзыва">
+                    <img class="review__img" src="img/img-review-3.jpg" alt="Фото автора отзыва" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="full-form content-wrapper">
+        <div class="full-form__inner">
+            <h2 class="full-form__title">Начни зарабатывать уже сегодня</h2>
+            <img class="full-form__img" src="img/img-laptop.png" alt="Илюстрация эксперта" width="532" height="519"
+                 loading="lazy">
+            <form class="full-form__form" action="https://a24.biz/reg/promoAuthor">
+                <input type="hidden" value="Фамилия">
+
+                <input class="full-form__input full-form__input--name"
+                       type="text"
+                       placeholder="Твое имя"
+                       aria-label="Укажите свое имя"
+                       required
+                >
+                <input class="full-form__input"
+                       type="email"
+                       aria-label="Укажите свой email"
+                       placeholder="E-mail"
+                       required
+                >
+                <button class="full-form__submit-btn button">Начать зарабатывать</button>
+
+                <p class="full-form__policy">
+                    Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь на&nbsp;обработку персональных данных и&nbsp;с&nbsp;правилами
+                    пользования Платформой
+                </p>
+            </form>
+        </div>
+    </section>
 </main>
 
-<footer class="footer"></footer>
+<footer class="footer">
+    <p class="footer__copyright">
+        &copy;&nbsp;2012&nbsp;&mdash; <span id="copyright-year">2022</span>г.
+        <br>
+        Автор24
+    </p>
+</footer>
 
+<section class="modal-nav content-wrapper hidden" data-section="modalNav">
+    <div class="modal-nav__inner">
+        <div class="modal-nav__header header">
+            <div class="header__logo">
+                <a class="header__logo-link" href="/" data-js="logoLink">
+                    <img class="header__logo-img"
+                         src="img/logo-main.svg"
+                         alt="Автор24"
+                         width="168"
+                         height="40"
+                    >
+                </a>
+            </div>
+
+            <button class="header__menu-btn" type="button" data-btn="closeNavigation">
+                <img class="header__menu-img"
+                     src="img/icon-close.svg"
+                     alt="Меню"
+                     width="24"
+                     height="24"
+                >
+            </button>
+        </div>
+
+        <div class="modal-nav__links">
+            <a class="modal-nav__link" data-anchor="mission">Как это работает</a>
+            <a class="modal-nav__link" data-anchor="banner">Участвуй в&nbsp;розыгрыше</a>
+            <a class="modal-nav__link" data-anchor="reviews">Отзывы</a>
+        </div>
+
+        <button class="modal-nav__btn button" data-btn="goToMainForm" data-anchor="hero">Заработать</button>
+    </div>
+</section>
+
+<script>
+    const currentYear = new Date().getFullYear();
+    document.querySelector('#copyright-year').innerHTML = currentYear.toString();
+</script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
