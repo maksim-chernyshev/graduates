@@ -13,12 +13,10 @@
     box-sizing: border-box;
 
     background-color: var(--black);
-    background-image:
-            url('../img/img-hero-large.png'),
-            url('../img/bg-gradient.png');
-    background-repeat: no-repeat, repeat;
-    background-position: right -65px bottom -20px, left top;
-    background-size: 300px, auto;
+    background-image: url('../img/img-hero-large.png');
+    background-repeat: no-repeat;
+    background-position: right -65px bottom -20px;
+    background-size: 300px;
 }
 
 .modal-nav__inner {
@@ -43,11 +41,9 @@
     font-size: 24px;
     line-height: 30px;
 
+    cursor: pointer;
+
     &:last-child {
         margin-bottom: 0;
     }
-}
-
-.modal-nav__btn {
-
 }
